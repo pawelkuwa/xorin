@@ -1,4 +1,4 @@
-# Xorin :tm: ₪ Powerful Minecraft Web Panel
+# Xorin ₪ Self Hosted Powerful Minecraft Web Panel
 
 ## Features
 - A lot of functions.
@@ -7,8 +7,11 @@
 - Secure connection with server.
 - Multi language support.
 - Light weight.
+## Overview:
+![](https://i.imgur.com/yQVyHLs.png)
 ## ToDo:
 ## Installation:
 *in progress*
 ### More informations:
+- Native support: Polish.
 - Web Panel is not ready yet.
