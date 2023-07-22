@@ -1,9 +1,19 @@
 let config;
+let subsites = ["console", "settings"];
+
+function contains(tekst, tablica) {
+    for (let i = 0; i < tablica.length; i++) {
+        if (tekst.includes(tablica[i])) {
+            return true;
+        }
+    }
+    return false;
+}
 
 async function loadConfig() {
     try {
         let url;
-        if (window.location.pathname.includes('console')) {
+        if (contains(window.location.pathname, subsites)) {
             url = '../config.json';
         } else {
             url = './config.json';
@@ -34,14 +44,32 @@ function initializeApp() {
     const mainHeader = document.getElementsByClassName('main-header')[0];
     const menuHeader = document.getElementsByClassName('menu-header')[0];
 
-    menuButton.addEventListener('click', function () {
-        mainHeader.style.display = 'none';
-        menuHeader.style.display = 'flex';
+    menuButton.addEventListener('click', () => {
+        mainHeader.style.animation = 'close-menu 0.3s 1';
+        mainHeader.style.pointerEvents = 'none';
+        setTimeout(() => {
+            mainHeader.style.display = 'none';
+        }, 300);
+
+        menuHeader.style.animation = 'open-menu 0.3s 1';
+        menuHeader.style.pointerEvents = 'auto';
+        setTimeout(() => {
+            menuHeader.style.display = 'flex';
+        }, 300);
     });
 
-    menuBackButton.addEventListener('click', function () {
-        menuHeader.style.display = 'none';
-        mainHeader.style.display = 'flex';
+    menuBackButton.addEventListener('click', () => {
+        menuHeader.style.animation = 'close-menu 0.3s 1';
+        menuHeader.style.pointerEvents = 'none';
+        setTimeout(() => {
+            menuHeader.style.display = 'none';
+        }, 300);
+
+        mainHeader.style.animation = 'open-menu 0.3s 1';
+        mainHeader.style.pointerEvents = 'auto';
+        setTimeout(() => {
+            mainHeader.style.display = 'flex';
+        }, 300);
     });
 
     const brandVersion = document.getElementById('brand-version');

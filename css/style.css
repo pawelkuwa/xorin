@@ -36,6 +36,43 @@ nav {
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+@keyframes close-menu {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes open-menu {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.menu-header ul li a:visited {
+    color: white;
+}
+
+.menu-header ul li a {
+    color: white;
+}
+
+.menu-header ul li a span {
+    transition: all 0.1s linear;
+}
+
+.menu-header ul li a span:hover {
+    color: lightgray;
+    font-size: 30px;
+    margin: auto;
+    transition: all 0.1s linear;
+}
+
 .brand {
     display: flex;
     gap: 3px;
@@ -103,6 +140,7 @@ nav ul {
     color: white;
     overflow-y: scroll;
     font-family: 'Space Mono', monospace;
+    scroll-behavior: smooth;
 }
 
 #logs div {
@@ -146,4 +184,46 @@ nav ul {
     align-items: center;
     color: white;
     font-family: 'Inter', sans-serif;
+}
+
+#settings {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #4F4557;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: white;
+    margin-top: 20px;
+    padding: 10px;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-family: 'Inter', sans-serif;
+}
+
+.status {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.online-pulse {
+    width: 19px;
+    height: 19px;
+}
+
+.online-pulse span {
+    background: #8ccf44;
+    opacity: .1;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    filter: drop-shadow(0 0 15px #8ccf44);
+}
+
+.online-pulse span:nth-child(1) {
+    opacity: .5;
+    width: 19px;
+    height: 19px;
 }

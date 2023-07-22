@@ -3,7 +3,7 @@
 ## Features
 - A lot of functions.
     - Log console with command prompt.
-- No need query/rcon connection.
+- No need query/rcon to open connection.
 - Secure connection with server.
 - Multi language support.
 - Light weight.

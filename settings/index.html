@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Xorin - Strona główna</title>
+        <title>Xorin - Ustawienia</title>
         <link rel="stylesheet" href="../css/style.css" type="text/css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,22 +22,32 @@
         </nav>
         <nav class="menu-header">
             <ul>
-                <li>ustawienia</li>
-                <li><a href="./console/">konsola</a></li>
+                <li>
+                    <a href="../settings/">
+                        <span class="material-symbols-outlined">
+                            settings
+                            </span>
+                    </a>
+                </li>
+                <li><a href="../console/">
+                    <span class="material-symbols-outlined">
+                        terminal
+                        </span>
+                </a></li>
             </ul>
             <span class="material-symbols-outlined menu-back-button material">
                 close
                 </span>
         </nav>
-        <section id="console-logs">
-            <div id="logs"></div>
-            <span>Automatyczne przewijanie <input type="checkbox" class="auto-scroll" checked></span>
-        </section>
-        <section id="console-command">
-            <input type="text" placeholder="Wpisz komendę..." class="console-command">
-
+        <section id="settings">
+            <div class="status">
+                <h3>x</h3>
+                <div class="online-pulse">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </section>
     </body>
     <script src="../js/script.js"></script>
-    <script src="../js/console.js"></script>
 </html>
