@@ -9,35 +9,28 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/35b2d55dba.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <nav class="main-header">
             <div class="brand">
-                <h1>Xorin</h1>
+                <h1><a href="../">Xorin</a></h1>
                 <span id="brand-version"></span>
             </div>
-            <span class="material-symbols-outlined menu-button material">
-                widgets
-                </span>
+            <i class="fa-solid fa-bars menu-button material nav-button"></i>
         </nav>
         <nav class="menu-header">
             <ul>
                 <li>
                     <a href="../settings/">
-                        <span class="material-symbols-outlined">
-                            settings
-                            </span>
+                        <i class="fa-solid fa-gear"></i>
                     </a>
                 </li>
                 <li><a href="../console/">
-                    <span class="material-symbols-outlined">
-                        terminal
-                        </span>
+                    <i class="fa-solid fa-terminal"></i>
                 </a></li>
             </ul>
-            <span class="material-symbols-outlined menu-back-button material">
-                close
-                </span>
+            <i class="fa-solid fa-xmark menu-back-button material nav-button"></i>
         </nav>
         <section id="console-logs">
             <div id="logs"></div>
