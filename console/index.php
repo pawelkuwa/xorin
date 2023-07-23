@@ -1,3 +1,6 @@
+<?php
+$config = include('../config.php');
+?>
 <!DOCTYPE html>
 <html lang="pl">
     <head>
@@ -15,7 +18,7 @@
         <nav class="main-header">
             <div class="brand">
                 <h1><a href="../">Xorin</a></h1>
-                <span id="brand-version"></span>
+                <span id="brand-version">v<?php echo $config['version']; ?></span>
             </div>
             <i class="fa-solid fa-bars menu-button material nav-button"></i>
         </nav>

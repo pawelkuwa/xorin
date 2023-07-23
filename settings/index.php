@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+$config = include('../config.php');
+?>
 <html lang="pl">
     <head>
         <meta charset="UTF-8">
@@ -15,7 +18,7 @@
         <nav class="main-header">
             <div class="brand">
                 <h1><a href="../">Xorin</a></h1>
-                <span id="brand-version"></span>
+                <span id="brand-version">v<?php echo $config['version']; ?></span>
             </div>
             <i class="fa-solid fa-bars menu-button material nav-button"></i>
         </nav>
@@ -34,7 +37,7 @@
         </nav>
         <section id="settings">
             <div class="status">
-                <h3>x</h3>
+                <h3>Sprawdź status połączenia z serwerem:</h3>
                 <div class="online-pulse">
                     <span></span>
                     <span></span>
