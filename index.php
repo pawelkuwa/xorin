@@ -17,7 +17,9 @@ $config = include('./config.php');
                 <h1><a href="#">Xorin</a></h1>
                 <span id="brand-version">v<?php echo $config['version']; ?></span>
             </div>
-            <i class="fa-solid fa-bars menu-button material nav-button"></i>
+            <div class="navigation-button">
+                <i class="fa-solid fa-bars menu-button nav-button"></i>
+            </div>
         </nav>
         <nav class="menu-header">
             <ul>
@@ -30,7 +32,9 @@ $config = include('./config.php');
                     <i class="fa-solid fa-terminal"></i>
                 </a></li>
             </ul>
-            <i class="fa-solid fa-xmark menu-back-button material nav-button"></i>
+            <div class="navigation-button">
+                <i class="fa-solid fa-xmark menu-back-button nav-button"></i>
+            </div>
         </nav>
     </body>
     <script src="js/script.js"></script>

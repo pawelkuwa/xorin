@@ -79,14 +79,37 @@ nav {
     font-family: 'Inter', sans-serif;
 }
 
-.brand h1 a {
-    text-decoration: none;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+.navigation-button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.15s ease-in;
+    border-radius: 5px;
+}
+
+.navigation-button:hover {
+    background-color: rgba(217, 217, 217, 0.3);
+    color: rgba(235, 235, 235, 1);
+    transition: all 0.15s ease-in;
+    cursor: pointer;
 }
 
 .nav-button {
     font-size: 25px;
+    transition: all .1s linear;
+}
+
+.nav-button:hover {
+    font-size: 20px;
+    transition: all .1s linear;
+}
+
+.brand h1 a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 .brand span {
@@ -110,21 +133,6 @@ nav ul {
     gap: 10px;
     list-style-type: none;
     font-family: 'Inter', sans-serif;
-}
-
-.material {
-    padding: 5px;
-    box-sizing: border-box;
-    border-radius: 50%;
-    transition: all 0.15s ease-in;
-
-}
-
-.material:hover {
-    background-color: rgba(217, 217, 217, 0.3);
-    color: rgba(235, 235, 235, 1);
-    transition: all 0.15s ease-in;
-    cursor: pointer;
 }
 
 #console-logs {
