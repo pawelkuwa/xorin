@@ -31,3 +31,13 @@ menuBackButton.addEventListener('click', () => {
         mainHeader.style.display = 'flex';
     }, 300);
 });
+
+// Notyfikacje dla Menu
+tippy('#menu-settings', {
+    content: 'Ustawienia',
+    delay: [300, 10]
+});
+tippy('#menu-console', {
+    content: 'Konsola',
+    delay: [300, 10]
+});

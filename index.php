@@ -25,11 +25,11 @@ if (!isset($_COOKIE['token'])) setcookie("token", $config['token'], time() + 604
         <nav class="menu-header">
             <ul>
                 <li>
-                    <a href="./settings/">
+                    <a href="./settings/" id="menu-settings">
                         <i class="fa-solid fa-gear"></i>
                     </a>
                 </li>
-                <li><a href="./console/">
+                <li><a href="./console/" id="menu-console">
                     <i class="fa-solid fa-terminal"></i>
                 </a></li>
             </ul>
@@ -38,5 +38,7 @@ if (!isset($_COOKIE['token'])) setcookie("token", $config['token'], time() + 604
             </div>
         </nav>
     </body>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="js/script.js"></script>
 </html>

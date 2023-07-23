@@ -135,6 +135,10 @@ nav ul {
     font-family: 'Inter', sans-serif;
 }
 
+.tippy-content {
+    font-family: 'Inter', sans-serif;
+}
+
 #console-logs {
     width: 90%;
     margin: 20px auto 0 auto;
