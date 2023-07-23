@@ -1,5 +1,6 @@
 <?php
 $config = include('./config.php');
+if (!isset($_COOKIE['token'])) setcookie("token", $config['token'], time() + 604800);
 ?>
 <!DOCTYPE html>
 <html lang="pl">

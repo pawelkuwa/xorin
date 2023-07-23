@@ -1,5 +1,6 @@
 <?php
 $config = include('../config.php');
+if (!isset($_COOKIE['token'])) setcookie("token", $config['token'], time() + 604800);
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -20,7 +21,9 @@ $config = include('../config.php');
                 <h1><a href="../">Xorin</a></h1>
                 <span id="brand-version">v<?php echo $config['version']; ?></span>
             </div>
-            <i class="fa-solid fa-bars menu-button material nav-button"></i>
+            <div class="navigation-button">
+                <i class="fa-solid fa-bars menu-button nav-button"></i>
+            </div>
         </nav>
         <nav class="menu-header">
             <ul>
@@ -29,11 +32,13 @@ $config = include('../config.php');
                         <i class="fa-solid fa-gear"></i>
                     </a>
                 </li>
-                <li><a href="../console/">
+                <li><a href="">
                     <i class="fa-solid fa-terminal"></i>
                 </a></li>
             </ul>
-            <i class="fa-solid fa-xmark menu-back-button material nav-button"></i>
+            <div class="navigation-button">
+                <i class="fa-solid fa-xmark menu-back-button nav-button"></i>
+            </div>
         </nav>
         <section id="console-logs">
             <div id="logs"></div>

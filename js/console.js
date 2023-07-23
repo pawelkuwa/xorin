@@ -2,9 +2,27 @@ const logs = document.getElementById(`logs`);
 const commandLine = document.getElementsByClassName(`console-command`)[0];
 const autoScroll = document.getElementsByClassName(`auto-scroll`)[0];
 
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+}
+
 function writeLogs() {
+    let token = getCookie("token");
     data = new FormData();
     data.append("type", "console");
+    data.append("token", token);
     
     fetch("http://localhost:8001/xorin", {
         method: "POST",
@@ -40,14 +58,16 @@ function writeLogs() {
             logs.scrollTop = logs.scrollHeight - logs.clientHeight;
         }
     }).catch(function (err) {
-        console.error(err + " błąd");
+        console.error("E01 - Wystąpił błąd: " + err);
     });
 }
 
 function executeCommand(command) {
+    let token = getCookie("token");
     data = new FormData();
     data.append("type", "command");
     data.append("command", command);
+    data.append("token", token);
     
     fetch("http://localhost:8001/xorin", {
         method: "POST",
@@ -60,7 +80,7 @@ function executeCommand(command) {
         }
     }).then(function (data) {
     }).catch(function (err) {
-        console.error(err);
+        console.error("E02 - Wystąpił błąd: " + err);
     });
 }
 
