@@ -8,7 +8,7 @@
 - Multi language support.
 - Light weight.
 ## Overview:
-![](https://i.imgur.com/yQVyHLs.png)
+![](https://i.imgur.com/PA4TyHx.png)
 ## ToDo:
 ## Installation:
 *in progress*
