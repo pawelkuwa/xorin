@@ -37,8 +37,19 @@ if (!isset($_COOKIE['token'])) setcookie("token", $config['token'], time() + 604
                 <i class="fa-solid fa-xmark menu-back-button nav-button"></i>
             </div>
         </nav>
+        <section id="dashboard">
+            <div class="item">
+                <div class="pie animate" style="--p:0;" id="ram-usage"></div>
+                <h1>Zużycie pamięć RAM</h1>
+            </div>
+            <div class="item">
+                <div class="pie animate" style="--p:0;" id="player-count"></div>
+                <h1>Gracze online</h1>
+            </div>
+        </section>
     </body>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="js/script.js"></script>
+    <script src="js/dashboard.js"></script>
 </html>
